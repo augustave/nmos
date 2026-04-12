@@ -1,0 +1,101 @@
+version: "1.1"
+namespace: "spatial_motion"
+summary: "Shared data structures, validation rules, and templates for spatial motion prototype bundles."
+
+shared_rules:
+  lifecycle:
+    - "orient: ingest technical system, extract narrative arc, define spatial metaphor and motion thesis"
+    - "conceptualize: generate visual directions, produce concept reel, document motion language"
+    - "map_logic: translate technical logic into node-based motion structures and bind data to behaviors"
+    - "translate: build XR interaction sandbox, validate ergonomics and framerate"
+    - "package: assemble prototype bundle, document assumptions and workflow, prepare handoff"
+  artifact_status:
+    - "validated"
+    - "simulated"
+    - "speculative"
+    - "not_yet_implemented"
+  confidence_levels:
+    - "high"
+    - "medium"
+    - "low"
+  evidence_rule:
+    - "Every claim about system behavior must cite a source artifact or test result."
+    - "If confidence is below high, mark it explicitly in assumptions-and-simulations.md."
+    - "Stakeholder-facing outputs must separate validated from speculative elements."
+  id_rule:
+    - "Use kebab-case identifiers for artifacts, nodes, and scenes."
+    - "Prototype bundle IDs follow SPATIAL-[SYSTEM-TYPE]-[YYMMDD]."
+
+schemas:
+  prototype_package:
+    required_root_files:
+      - "genai-concept-reel.mp4"
+      - "node-network.toe"
+      - "xr-interaction-sandbox/"
+      - "workflow-log.md"
+      - "assumptions-and-simulations.md"
+      - "motion-narrative-audit.md"
+      - "ergonomics-validation.md"
+      - "presentation-deck.pdf"
+    metadata:
+      - "prototype_id"
+      - "created_date"
+      - "team"
+      - "system_input_hash"
+  interaction_model:
+    required_fields:
+      - "id"
+      - "name"
+      - "primary_input"
+      - "feedback_states"
+      - "spatial_constraints"
+      - "validation_status"
+      - "evidence"
+  motion_narrative:
+    required_fields:
+      - "id"
+      - "system_entity"
+      - "spatial_metaphor"
+      - "motion_behavior"
+      - "correspondence_to_system"
+      - "confidence_level"
+      - "justification"
+  workflow_log:
+    required_fields:
+      - "prototype_id"
+      - "date_created"
+      - "authors"
+      - "phase_logs"
+      - "final_asset_locations"
+
+templates:
+  workflow_log_stub: |
+    # Workflow Log
+
+    **Prototype ID:** SPATIAL-[TYPE]-[YYMMDD]
+    **Date Created:** [ISO 8601]
+    **Authors:** [names]
+
+    ## Phase Logs
+
+    | Phase | Step | Action | Tool | Input | Output | Notes |
+    |------|------|--------|------|-------|--------|-------|
+
+  interaction_model_stub: |
+    # Interaction Model
+
+    **ID:** [kebab-case-id]
+    **Validation Status:** [validated | simulated | speculative]
+
+    ## Primary Input
+
+    - Modality: [gaze | hand-tracking | gesture | controller | voice]
+    - Precision Tolerance: [number]
+    - Session Duration: [minutes]
+
+    ## Feedback States
+
+    - Hover: [description]
+    - Dwell: [description]
+    - Confirm: [description]
+    - Error: [description]

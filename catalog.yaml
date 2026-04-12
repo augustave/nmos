@@ -1,0 +1,64 @@
+version: "1.0"
+library_name: "a16z-skill-library"
+owner: "taoconrad"
+status: "active"
+
+canonical_contract:
+  required_package_files:
+    - "SKILL.md"
+    - "PRD.yaml"
+  recommended_package_files:
+    - "schema.yaml"
+    - "SWARM.md"
+  required_skill_front_matter_fields:
+    - "name"
+    - "version"
+    - "owner"
+    - "status"
+    - "intent"
+    - "when_to_use"
+    - "when_not_to_use"
+    - "inputs"
+    - "outputs"
+
+skills:
+  - id: "spatial-motion-genai-architect"
+    path: "skills/spatial-motion-genai-architect"
+    status: "active"
+    files:
+      skill: "SKILL.md"
+      prd: "PRD.yaml"
+      schema: "schema.yaml"
+      swarm: "SWARM.md"
+
+  - id: "growth-performance-design-architect"
+    path: "skills/growth-performance-design-architect"
+    status: "active"
+    files:
+      skill: "SKILL.md"
+      prd: "PRD.yaml"
+      schema: "schema.yaml"
+
+  - id: "autonomous-venture-studio"
+    path: "skills/autonomous-venture-studio"
+    status: "active"
+    files:
+      skill: "SKILL.md"
+      prd: "PRD.yaml"
+      swarm: "SWARM.md"
+
+  - id: "new-media-operating-system"
+    path: "skills/new-media-operating-system"
+    status: "concept"
+    files:
+      skill: "SKILL.md"
+      prd: "PRD.yaml"
+      swarm: "SWARM.md"
+
+source_material:
+  - path: "Spatial"
+    purpose: "original spatial draft bundle"
+  - path: "Growth-performance"
+    purpose: "original growth draft bundle"
+  - path: "Venture Studio"
+    purpose: "original venture studio draft bundle"

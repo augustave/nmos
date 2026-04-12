@@ -1,0 +1,136 @@
+version: "1.0"
+product_name: "growth-performance-design-architect"
+document_type: "PRD"
+owner: "growth-marketing-product-union"
+status: "active"
+
+north_star: "Improve commercial performance by aligning promise, proof, and product experience across the funnel without sacrificing truth, compliance, or accessibility."
+
+operating_thesis: "Performance gains compound when copy, design, instrumentation, and compliance are treated as one system rather than separate functions."
+
+lifecycle:
+  - "intake"
+  - "message_strategy"
+  - "production"
+  - "instrumentation"
+  - "launch_review"
+
+ranked_goals:
+  1: "Increase conversion quality and business efficiency metrics such as CPA, CVR, activation rate, and retention."
+  2: "Maintain message continuity from acquisition through first product value."
+  3: "Reduce compliance risk by treating claims as governed objects instead of last-minute edits."
+  4: "Create reusable messaging blocks that speed future experimentation."
+  5: "Expose where the promise breaks so fixes can target the actual bottleneck."
+
+anti_goals:
+  - "Do not optimize vanity metrics without business impact."
+  - "Do not use manipulation, fake scarcity, or deceptive friction."
+  - "Do not let marketing promise capabilities the product does not deliver."
+  - "Do not ship experiments without instrumentation and guardrails."
+
+problem_statement:
+  - "Marketing, landing pages, onboarding, and lifecycle often drift into separate narratives."
+  - "Claims are frequently written before evidence and disclaimers are understood."
+  - "Teams run tests without clear stop rules or trustworthy event definitions."
+  - "Creative iteration breaks down because learnings are not modularized."
+
+users:
+  primary:
+    - name: "Growth Lead"
+      context: "Owns funnel efficiency and experimentation velocity."
+      pain: "Creative, analytics, and compliance live in separate loops."
+      outcome: "A deployable experiment system with clear evidence and measurement."
+  secondary:
+    - name: "Product Marketer"
+      context: "Needs message continuity between campaign and product."
+      pain: "Acquisition messaging often diverges from onboarding reality."
+      outcome: "Shared promise and proof hierarchy across surfaces."
+    - name: "Designer / Copywriter"
+      context: "Produces assets and copy under performance pressure."
+      pain: "Feedback arrives late and often conflicts across stakeholders."
+      outcome: "Reusable messaging blocks and explicit decision rules."
+
+success_metrics:
+  - "Primary metric and guardrails are defined before asset production begins."
+  - "Claim coverage reaches 100 percent in the claims-evidence matrix for shipped variants."
+  - "Promise-match map exists for all launch variants."
+  - "All experiments have instrumentation, stop rules, and reporting format before launch."
+  - "Accessibility and compliance review are complete before distribution."
+
+functional_requirements:
+  - id: "FR-1"
+    name: "Claims Governance"
+    requirement: "Every meaningful claim must map to evidence, disclaimer requirements, banned phrasing, and safer rewrites."
+  - id: "FR-2"
+    name: "Message Block Library"
+    requirement: "Produce reusable hooks, proof blocks, objection blocks, and CTAs tagged by context and risk."
+  - id: "FR-3"
+    name: "Message Match Map"
+    requirement: "Map promise and proof continuity across ad, landing, signup, onboarding, and lifecycle surfaces."
+  - id: "FR-4"
+    name: "Promise-Break Reporting"
+    requirement: "Identify where the promise breaks in the funnel and recommend corrective actions."
+  - id: "FR-5"
+    name: "Measurement Planning"
+    requirement: "Define metric, guardrails, sample assumptions, duration, stop rules, and reporting format."
+
+non_functional_requirements:
+  - id: "NFR-1"
+    name: "Compliance Readiness"
+    requirement: "High-risk claims are reviewable and defensible before launch."
+  - id: "NFR-2"
+    name: "Readability"
+    requirement: "Assets use clear, scannable language appropriate to the funnel stage."
+  - id: "NFR-3"
+    name: "Accessibility"
+    requirement: "Product and lifecycle surfaces meet WCAG AA where applicable."
+  - id: "NFR-4"
+    name: "Reusability"
+    requirement: "Message components and learnings can be reused in subsequent experiments."
+
+system_modules:
+  claims_engine:
+    description: "Translates claims into governed evidence, disclaimers, and safe rewrite paths."
+  message_blocks_library:
+    description: "Stores modular messaging components tagged for reuse."
+  message_match_mapper:
+    description: "Tracks continuity between promise and proof across surfaces."
+  measurement_planner:
+    description: "Defines instrumentation, stop rules, and reporting conventions."
+
+risks:
+  - id: "R-1"
+    title: "Message overpromises product reality"
+    severity: "high"
+    probability: "medium"
+    mitigation: "Force message-match review before production release."
+  - id: "R-2"
+    title: "Claims trigger legal or compliance issues"
+    severity: "high"
+    probability: "medium"
+    mitigation: "Use claims matrix and required disclaimer review before launch."
+  - id: "R-3"
+    title: "Experiment lacks usable telemetry"
+    severity: "high"
+    probability: "medium"
+    mitigation: "Block launch until event definitions and reporting plan are complete."
+  - id: "R-4"
+    title: "Creative iteration becomes noisy"
+    severity: "medium"
+    probability: "high"
+    mitigation: "Use modular message blocks and document learnings by angle and format."
+
+deliverables:
+  - "experiment_design_package"
+  - "copy_deck_v1"
+  - "claims_evidence_matrix_v1"
+  - "message_blocks_library_v1"
+  - "message_match_map_v1"
+  - "promise_break_report_v1"
+  - "measurement_plan_v1"
+
+what_i_should_remember:
+  - "Design and copy are one system when the goal is performance."
+  - "A claim without evidence is risk, not persuasion."
+  - "Message mismatch usually breaks growth more than weak visual polish."
+  - "Instrumentation is part of the artifact, not follow-up work."

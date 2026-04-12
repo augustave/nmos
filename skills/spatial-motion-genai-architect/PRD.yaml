@@ -1,0 +1,180 @@
+version: "1.1"
+product_name: "spatial-motion-genai-architect"
+document_type: "PRD"
+owner: "advanced-interfaces-rnd"
+status: "active"
+
+north_star: "Make invisible system logic feel graspable through motion, depth, timing, and embodied feedback while producing demo-ready XR prototypes fast enough to influence real decisions."
+
+operating_thesis: "Technical systems are understood through narrative, not diagrams. By combining spatial metaphor, motion language, and rapid generative iteration, abstract architecture becomes immersive experience that stakeholders can grasp, critique, and fund."
+
+lifecycle:
+  - "orient"
+  - "conceptualize"
+  - "map_logic"
+  - "translate"
+  - "package"
+
+ranked_goals:
+  1: "Enable solo founders and product leads to produce stakeholder-grade XR prototypes within a single sprint."
+  2: "Translate complex technical systems into motion narratives that reveal behavior, not just structure."
+  3: "Balance GenAI speed with deterministic spatial logic and reproducibility."
+  4: "Produce reproducible prototype workflows that can be handed off and extended."
+  5: "Separate concept visualization, simulation, and validated capability with no ambiguity."
+
+anti_goals:
+  - "Do not produce production-ready XR applications."
+  - "Do not treat GenAI output as final truth."
+  - "Do not build static mockups that fail to demonstrate behavior."
+  - "Do not fabricate capabilities that do not exist in the source system."
+  - "Do not skip workflow logging."
+
+problem_statement:
+  - "Novel interaction paradigms are difficult to evaluate from static specs."
+  - "Convincing XR prototypes are usually too slow and expensive for small teams."
+  - "GenAI is fast but unreliable on structure, fidelity, and technical honesty."
+  - "Technical systems are invisible until motion and spatial metaphor make them tangible."
+  - "Prototype knowledge is often lost because the workflow is undocumented."
+
+users:
+  primary:
+    - name: "Solo Founder / Product Lead"
+      context: "Needs to validate a novel spatial or gesture-based concept before committing engineering resources."
+      pain: "Wireframes do not convey embodied behavior and agencies are too slow."
+      outcome: "A reel and interactive sandbox that make the concept legible."
+  secondary:
+    - name: "Design/XR Lead"
+      context: "Runs a small team building internal R&D or showcase prototypes."
+      pain: "GenAI tools are fast but unreliable and handoff to engineering loses context."
+      outcome: "A reproducible process and motion language artifact."
+    - name: "Investor / Stakeholder"
+      context: "Evaluates whether a novel interaction model is credible and worth backing."
+      pain: "Static diagrams and vague language do not build confidence."
+      outcome: "An experience that makes the system feel real without overstating readiness."
+
+success_metrics:
+  - "Prototype package can be assembled within 3-5 working days from validated specs."
+  - "A stakeholder can operate the XR sandbox and understand core behavior without guided explanation."
+  - "The workflow log is detailed enough to reproduce the build three months later."
+  - "The prototype correctly represents the underlying technical system."
+  - "Visual language is consistent across reel, node logic, and XR sandbox."
+  - "XR interaction latency is below 120 ms and framerate is stable at target."
+  - "No hallucinated logos, copyright fragments, or misleading technical claims survive curation."
+
+functional_requirements:
+  - id: "FR-1"
+    name: "Narrative Translation"
+    requirement: "Extract core entities, state transitions, and feedback loops and map them to a spatial metaphor before visual design begins."
+  - id: "FR-2"
+    name: "GenAI Direction Exploration"
+    requirement: "Generate 3-5 visual directions and curate aggressively for geometry, lighting, brand fit, and honesty."
+  - id: "FR-3"
+    name: "Node-Based Logic Mapping"
+    requirement: "Translate technical behavior into deterministic motion structures with visible data bindings and state transitions."
+  - id: "FR-4"
+    name: "XR Interaction Implementation"
+    requirement: "Build a functional interaction sandbox with hover, dwell, confirm, error, and ergonomic validation."
+  - id: "FR-5"
+    name: "Workflow Documentation"
+    requirement: "Ship every prototype with a detailed workflow log tracing prompts, tools, exports, cleanup, and manual corrections."
+  - id: "FR-6"
+    name: "Simulation Disclosure"
+    requirement: "Explicitly document validated, simulated, speculative, and deferred elements."
+
+non_functional_requirements:
+  - id: "NFR-1"
+    name: "Execution Speed"
+    requirement: "Core prototype assembly completes within 3-5 business days from validated specs."
+  - id: "NFR-2"
+    name: "Runtime Performance"
+    requirement: "XR sandbox maintains target framerate and input latency thresholds during critical flows."
+  - id: "NFR-3"
+    name: "Portability"
+    requirement: "Prototype package is reproducible on standard design/XR hardware."
+  - id: "NFR-4"
+    name: "Handoff Clarity"
+    requirement: "A new builder can understand intended behavior and rationale within 30 minutes."
+  - id: "NFR-5"
+    name: "Safety and Governance"
+    requirement: "All generative outputs are reviewed for copyright, hallucination, motion safety, and brand risks."
+
+system_modules:
+  genai_pipeline:
+    description: "Produces style frames, motion studies, and reel components with prompt and curation traceability."
+  node_compositor:
+    description: "Maps technical logic to node graphs and validates motion-to-system correspondence."
+  xr_sandbox:
+    description: "Implements the proposed interaction model with feedback states and ergonomic checks."
+  brand_filter:
+    description: "Audits outputs against motion, typography, color, and cinematic constraints."
+
+artifact_sequence:
+  - step: 1
+    phase: "orient"
+    primary_artifact: "system-narrative.md + visual-directions.pdf"
+    owner: "concept-director"
+    gate: "Narrative maps system logic to motion thesis and direction is approved."
+  - step: 2
+    phase: "conceptualize"
+    primary_artifact: "genai-concept-reel.mp4 + motion-language.md"
+    owner: "motion-engineer"
+    gate: "Reel demonstrates behavior flow and passes brand and provenance review."
+  - step: 3
+    phase: "map_logic"
+    primary_artifact: "node-network.toe + logic-binding-doc.md"
+    owner: "motion-engineer"
+    gate: "Node graph mirrors the system structure and state transitions."
+  - step: 4
+    phase: "translate"
+    primary_artifact: "xr-interaction-sandbox/ + ergonomics-report.md"
+    owner: "xr-builder"
+    gate: "Latency, framerate, and ergonomics meet the target bar."
+  - step: 5
+    phase: "package"
+    primary_artifact: "immersive-prototype-package.zip"
+    owner: "xr-builder"
+    gate: "Files are complete, workflow log is complete, and disclosure is explicit."
+
+risks:
+  - id: "R-1"
+    title: "GenAI output fails brand fidelity"
+    severity: "high"
+    probability: "medium"
+    mitigation: "Curate aggressively and fall back to deterministic 3D or manual compositing."
+  - id: "R-2"
+    title: "Technical system is under-specified"
+    severity: "high"
+    probability: "high"
+    mitigation: "Require structured system input and escalate ambiguities in Phase 1."
+  - id: "R-3"
+    title: "XR interactions are ergonomically unsafe"
+    severity: "medium"
+    probability: "medium"
+    mitigation: "Apply spatial ergonomics heuristics and test with non-authors."
+  - id: "R-4"
+    title: "Prototype dazzles but fails to teach"
+    severity: "medium"
+    probability: "medium"
+    mitigation: "Require motion-to-logic correspondence checks and remove decorative noise."
+  - id: "R-5"
+    title: "Workflow cannot be reproduced"
+    severity: "medium"
+    probability: "low"
+    mitigation: "Enforce detailed workflow logging and handoff review."
+
+deliverables:
+  - "genai-concept-reel.mp4"
+  - "node-network.toe"
+  - "xr-interaction-sandbox/"
+  - "workflow-log.md"
+  - "assumptions-and-simulations.md"
+  - "motion-narrative-audit.md"
+  - "ergonomics-validation.md"
+  - "presentation-deck.pdf"
+
+what_i_should_remember:
+  - "Motion is the primary tool for making invisible systems visible."
+  - "Spatial metaphor must remain consistent across all artifacts."
+  - "GenAI is a speed tool, not a truth source."
+  - "Simulation disclosure is not optional."
+  - "Reproducibility is more valuable than polish without handoff."

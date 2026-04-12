@@ -1,0 +1,145 @@
+version: "1.0"
+product_name: "autonomous-venture-studio"
+document_type: "PRD"
+owner: "venture-studio-executive-office"
+status: "active"
+
+north_star: "Architect, build, brand, and operationalize iconic digital products from ambiguous concept to market-ready system with enterprise-grade narrative control."
+
+operating_thesis: "A venture studio becomes more effective when strategy, product, brand, operations, and governance run in a reciprocal loop rather than a waterfall handoff chain."
+
+topology:
+  shape: "triangular"
+  feedback_mode: "continuous"
+  orchestration_model: "venture-loop"
+  nodes:
+    - "product-foundry-architect"
+    - "brand-experience-sovereign"
+    - "strategic-narrative-operator"
+
+ranked_goals:
+  1: "Validate a real problem before major build investment."
+  2: "Produce enterprise-grade product architecture and a credible prototype."
+  3: "Create a differentiated brand operating system that extends across product and GTM."
+  4: "Translate technical and design truth into executive-ready narrative."
+  5: "Run autonomous workflows with explicit governance, evidence, and override controls."
+
+anti_goals:
+  - "Do not build without documented demand or workflow pain."
+  - "Do not let brand outrun product reality."
+  - "Do not let executive narrative contradict implemented capability."
+  - "Do not automate risky behavior without evidence and auditability."
+
+problem_statement:
+  - "Early-stage teams frequently separate product, brand, and executive narrative into disconnected workstreams."
+  - "Founders often need full-stack strategy and design leverage before they can hire specialized teams."
+  - "Autonomous systems create value only when truth, governance, and escalation are built into the loop."
+
+users:
+  primary:
+    - name: "Founder / Venture Lead"
+      context: "Needs to turn an opportunity into a coherent company-grade product and story."
+      pain: "The work spans product, brand, narrative, and operating rigor before a full team exists."
+      outcome: "A validated wedge, a product system, a brand system, and a board-ready narrative."
+  secondary:
+    - name: "Design / Product Operator"
+      context: "Runs cross-functional work with limited staff."
+      pain: "Handoffs between design, product, and GTM cause drift and rework."
+      outcome: "A reciprocal operating model with clear artifacts and gates."
+
+success_metrics:
+  - "Problem truth is documented before major build work begins."
+  - "Core prototype demonstrates the main utility and the defining complexity of the product."
+  - "Brand and product surfaces share one design DNA."
+  - "Executive narrative is grounded in implemented or explicitly disclosed capability."
+  - "Governance evidence exists for major risks, overrides, and launch assumptions."
+
+functional_requirements:
+  - id: "FR-1"
+    name: "Market Requirement Definition"
+    requirement: "Convert the venture brief and market signals into a validated market requirement."
+  - id: "FR-2"
+    name: "System Architecture Packet"
+    requirement: "Produce domain model, service boundaries, workflow state model, and product prototype."
+  - id: "FR-3"
+    name: "Brand Operating System"
+    requirement: "Define visual, verbal, motion, and campaign rules that extend across product and GTM."
+  - id: "FR-4"
+    name: "Executive Narrative Layer"
+    requirement: "Translate product and brand truth into a decision-ready narrative for leadership."
+  - id: "FR-5"
+    name: "Governance Evidence Vault"
+    requirement: "Capture assumptions, risk classifications, overrides, disclosures, and approvals."
+
+non_functional_requirements:
+  - id: "NFR-1"
+    name: "Reciprocal Feedback"
+    requirement: "Product, brand, and narrative nodes cross-review one another continuously."
+  - id: "NFR-2"
+    name: "System Reuse"
+    requirement: "Outputs form reusable systems instead of isolated artifacts."
+  - id: "NFR-3"
+    name: "Governed Autonomy"
+    requirement: "Increasing automation must increase auditability, not reduce it."
+  - id: "NFR-4"
+    name: "Truth Preservation"
+    requirement: "Narrative simplification cannot cross into material misrepresentation."
+
+subskills:
+  - id: "product-foundry-architect"
+    role: "builder"
+    owner: "product-engineering"
+    risk_level: "high"
+  - id: "brand-experience-sovereign"
+    role: "visionary"
+    owner: "global-marketing"
+    risk_level: "high"
+  - id: "strategic-narrative-operator"
+    role: "synthesizer"
+    owner: "executive-office"
+    risk_level: "critical"
+
+gates:
+  - "market_truth_gate"
+  - "systems_truth_gate"
+  - "utility_gate"
+  - "aesthetic_coherence_gate"
+  - "narrative_truth_gate"
+  - "governance_gate"
+  - "launch_readiness_gate"
+
+risks:
+  - id: "R-1"
+    title: "Wrong product receives high-confidence polish"
+    severity: "critical"
+    probability: "medium"
+    mitigation: "Block build until the problem and wedge are validated."
+  - id: "R-2"
+    title: "Brand system outruns product capability"
+    severity: "high"
+    probability: "medium"
+    mitigation: "Require campaign claims to map to implemented or disclosed capability."
+  - id: "R-3"
+    title: "Executive narrative diverges from technical truth"
+    severity: "high"
+    probability: "medium"
+    mitigation: "Narrative operator reviews product and brand outputs before external use."
+  - id: "R-4"
+    title: "Autonomous workflows lack governance"
+    severity: "critical"
+    probability: "medium"
+    mitigation: "Maintain evidence vault, explicit overrides, and launch-readiness review."
+
+deliverables:
+  - "validated_market_requirement_v1"
+  - "system_architecture_packet_v1"
+  - "interactive_prototype_v1"
+  - "brand_operating_system_v1"
+  - "executive_narrative_v1"
+  - "governance_evidence_vault_v1"
+
+what_i_should_remember:
+  - "Validation precedes build."
+  - "Product, brand, and narrative must behave like one organism."
+  - "Governance is part of the product system, not a legal afterthought."
+  - "Executive clarity matters only if it preserves underlying truth."

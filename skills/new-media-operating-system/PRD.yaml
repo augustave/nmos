@@ -1,0 +1,42 @@
+version: "0.1"
+product_name: "new-media-operating-system"
+document_type: "PRD"
+owner: "design-new-media"
+status: "concept"
+
+north_star: "Turn complex ideas into high-signal new media systems that preserve truth, taste, and distribution fit."
+
+operating_thesis: "Strong design teams should be able to encode narrative, review, and production logic as reusable systems rather than rebuilding the workflow from scratch for every story."
+
+lifecycle:
+  - "ingest"
+  - "frame"
+  - "design"
+  - "build"
+  - "review"
+
+ranked_goals:
+  1: "Translate dense material into a usable story spine."
+  2: "Create a coherent visual and motion direction for the asset set."
+  3: "Produce a multi-format output stack without losing narrative integrity or company specificity."
+  4: "Preserve taste and strategic truth through explicit review gates."
+
+functional_requirements:
+  - id: "FR-1"
+    name: "Story Framing"
+    requirement: "Extract a concise narrative angle from complex source material."
+  - id: "FR-2"
+    name: "System Direction"
+    requirement: "Define typography, imagery, motion, and format logic as one system."
+  - id: "FR-3"
+    name: "Asset Stack"
+    requirement: "Produce outputs across motion, editorial, social, and interactive surfaces."
+  - id: "FR-4"
+    name: "Truth Gate"
+    requirement: "Review claims, strategic clarity, and visual coherence before release."
+
+deliverables:
+  - "story_brief_v1"
+  - "motion_direction_v1"
+  - "asset_system_v1"
+  - "review_gate_v1"

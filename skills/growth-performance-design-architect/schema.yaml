@@ -1,0 +1,61 @@
+version: "1.0"
+namespace: "growth_performance"
+summary: "Shared rules and output shapes for growth and performance design work."
+
+shared_rules:
+  evidence_rule:
+    - "Every major claim in shipped copy must map to evidence or be rewritten."
+    - "If a disclaimer is required, it must travel with the claim."
+  message_match_rule:
+    - "Ad promise, landing promise, and product first-value promise must remain aligned."
+    - "If the promise changes by surface, record the reason and expected effect."
+  experiment_rule:
+    - "No launch without a primary metric, guardrails, and stop rules."
+    - "No report without segment-level interpretation where segment data exists."
+
+schemas:
+  claims_evidence_matrix_v1:
+    required_fields:
+      - "claim"
+      - "evidence"
+      - "required_disclaimer"
+      - "banned_words"
+      - "rewrite_options"
+  message_blocks_library_v1:
+    required_fields:
+      - "block_id"
+      - "block_type"
+      - "funnel_stage"
+      - "segment"
+      - "risk_level"
+      - "copy"
+  message_match_map_v1:
+    required_fields:
+      - "variant_id"
+      - "ad_promise"
+      - "landing_promise"
+      - "product_promise"
+      - "proof_chain"
+  measurement_plan_v1:
+    required_fields:
+      - "primary_metric"
+      - "guardrails"
+      - "segments"
+      - "duration"
+      - "stop_rules"
+      - "reporting_format"
+
+templates:
+  measurement_plan_stub: |
+    # Measurement Plan
+
+    - Primary Metric:
+    - Guardrails:
+    - Segments:
+    - Duration:
+    - Stop Rules:
+    - Reporting Format:
+
+  claims_evidence_matrix_stub: |
+    | Claim | Evidence | Disclaimer | Banned Words | Rewrite Options |
+    |-------|----------|------------|--------------|-----------------|

@@ -1,0 +1,319 @@
+version: "1.1"
+namespace: "spatial_motion"
+summary: "Shared data structures, validation rules, and templates for spatial-motion-genai-architect prototype bundles. Ensures consistency across concept reel, node logic, XR sandbox, and handoff documentation."
+
+shared_rules:
+  lifecycle:
+    - "orient: Ingest technical system, extract narrative arc, define spatial metaphor and motion thesis."
+    - "conceptualize: Generate visual directions, produce concept reel, document motion language."
+    - "map_logic: Translate technical logic into node-based motion structures, bind data to behaviors."
+    - "translate: Build XR interaction sandbox, validate ergonomics and framerate, tune spatial depth."
+    - "package: Assemble prototype bundle, document assumptions and workflow, prepare handoff."
+
+  artifact_status:
+    - "validated: Behavior tested in engine or against source system; credible for stakeholder consumption."
+    - "simulated: Mocked or abstracted for speed; not real-time tested; must be labeled in demo."
+    - "speculative: Proposed for discussion; not implemented; do not present as proven."
+    - "not_yet_implemented: Identified but explicitly deferred; note technical barriers if relevant."
+
+  confidence_levels:
+    - "high: Directly validated against source system; tested in engine; stakeholder-ready."
+    - "medium: Tested in isolation; consistent with logical structure; minor uncertainties remain."
+    - "low: Speculative or simulated; clearly labeled; for direction-setting only."
+
+  evidence_rule:
+    - "Every claim about system behavior must cite source: technical-system-data, workflow-log, or engine test result."
+    - "If confidence < high, mark explicitly in assumptions-and-simulations.md."
+    - "Stakeholder-facing outputs must separate validated from speculative with visual or textual labels."
+
+  id_rule:
+    - "All artifacts, nodes, and scenes shall use kebab-case identifiers (e.g., data-flow-01, gaze-select-feedback)."
+    - "Prototype bundle ID format: SPATIAL-[SYSTEM-TYPE]-[YY][MM][DD] (e.g., SPATIAL-FLOW-250404)."
+
+schemas:
+  prototype_package:
+    description: "Top-level container for all deliverables from a single prototype run."
+    structure:
+      root:
+        - "genai-concept-reel.mp4"
+        - "node-network.toe"
+        - "xr-interaction-sandbox/"
+        - "workflow-log.md"
+        - "assumptions-and-simulations.md"
+        - "motion-narrative-audit.md"
+        - "ergonomics-validation.md"
+        - "presentation-deck.pdf"
+      metadata:
+        - "prototype_id: string (SPATIAL-[TYPE]-[YYMMDD])"
+        - "created_date: ISO 8601"
+        - "team: array of strings (roles)"
+        - "system_input_hash: string (checksum of technical-system-data for traceability)"
+    validation:
+      - "All files present and non-empty."
+      - "Workflow log mentions every artifact by name."
+      - "Assumptions doc explicitly lists mocked and speculative items."
+      - "Simulation disclosure visible in presentation-deck.pdf."
+
+  interaction_model:
+    description: "Specification of primary and fallback input methods, feedback states, and ergonomic constraints."
+    template:
+      id: "string (e.g., gaze-pinch-01)"
+      name: "string"
+      primary_input:
+        - modality: "enum (gaze, hand-tracking, gesture, controller, voice, multi-modal)"
+        - precision_tolerance_mm: "number"
+        - expected_session_duration_minutes: "number"
+      secondary_input:
+        - modality: "string or null"
+        - fallback_rationale: "string"
+      feedback_states:
+        - "hover: visual description"
+        - "dwell: timing and visual feedback"
+        - "confirm: gesture or button; confirmation latency_ms"
+        - "cancel: undo or escape method"
+        - "error: state and recovery path"
+      spatial_constraints:
+        - comfortable_reach_zone: "description (arm elevation, horizontal sweep)"
+        - field_of_view_utilization: "percentage of visual field"
+        - depth_legibility_min_distance_m: "number"
+        - confirmation_dwell_time_ms: "number"
+      estimated_fatigue_hours: "number (sustainable session length)"
+      validation_status: "enum (validated, simulated, speculative)"
+      evidence: "reference to ergonomics-validation.md section"
+
+  motion_narrative:
+    description: "Document of temporal behavior mapping from technical system to visual manifestation."
+    template:
+      id: "string"
+      system_entity: "string (e.g., 'data-flow-in-queue')"
+      spatial_metaphor: "string (e.g., 'liquid flowing through transparent pipes')"
+      motion_behavior:
+        - trigger: "string (e.g., 'new item enqueued')"
+        - visual_response: "string (e.g., 'sphere spawns at queue-head, accelerates along flow-path, color shifts from blue to white')"
+        - timing_ms: "number"
+        - feedback_modality: "array (color, scale, position, rotation, particle, sound)"
+      correspondence_to_system:
+        - system_state: "string"
+        - visual_manifestation: "string"
+        - fidelity_assessment: "enum (high, medium, low)"
+      confidence_level: "enum (high, medium, low)"
+      justification: "string (why this metaphor and timing)"
+
+  demo_spec:
+    description: "Configuration for a specific demo or presentation context."
+    template:
+      id: "string (e.g., investor-demo-01, conference-booth-01)"
+      audience: "string (executive, investor, designer, engineer, consumer)"
+      environment:
+        - hardware: "string (VR headset, tablet, desktop, AR glasses)"
+        - space: "string (desk, room-scale, public booth)"
+        - network: "enum (offline, wifi, cellular)"
+      time_budget_minutes: "number"
+      success_criteria:
+        - "array of measurable outcomes (e.g., 'stakeholder understands core data flow', 'investor feels confident in interaction design')"
+      segments:
+        - "time_minutes: number"
+        - "segment_name: string"
+        - "focus: string (what system behavior or interaction to highlight)"
+        - "artifact_used: string (reel segment, sandbox scene, node visualization)"
+      presenter_notes: "string (talking points, anticipated questions, fallback if tech fails)"
+      simulation_disclosures: "array of strings (clearly state what is mocked or speculative)"
+
+  workflow_log:
+    description: "Detailed record of every step, tool invocation, and manual correction for reproducibility."
+    template:
+      prototype_id: "string"
+      date_created: "ISO 8601"
+      authors: "array of strings"
+      phase_logs:
+        - phase: "enum (orient, conceptualize, map_logic, translate, package)"
+          steps:
+            - step_number: "integer"
+              action: "string (e.g., 'Extracted data-flow entities from technical-system-data')"
+              tool_used: "string or null"
+              input_artifact: "string or null"
+              output_artifact: "string or null"
+              duration_minutes: "number"
+              notes: "string (decisions, alternatives tried, blockers encountered)"
+              evidence: "reference to output file or screenshot"
+      genai_workflow_detail:
+        - model: "string (e.g., Kling, Midjourney v6, Runway)"
+          prompt: "string (full prompt text)"
+          parameters: "object (seed, steps, negative_prompt, etc.)"
+          output_asset: "string (filename)"
+          curation_notes: "string (what was adjusted, what was replaced)"
+          copyright_review: "string (none, low-risk, reviewed)"
+      manual_corrections:
+        - artifact: "string"
+          issue: "string (e.g., 'Avatar hands hallucinated extra fingers')"
+          fix_method: "string (re-generated, manually edited, replaced with 3D asset)"
+          time_to_fix_minutes: "number"
+      blockers_and_escalations:
+        - blocker: "string"
+          resolution: "string"
+          impact_minutes: "number"
+      final_asset_locations: "object (artifact_name: file_path)"
+      handoff_notes: "string (what to know before iterating, technical debt or loose ends)"
+
+templates:
+  immersive_prototype_package_stub: |
+    # Immersive Prototype Package
+
+    **Prototype ID:** SPATIAL-[TYPE]-[YYMMDD]
+    **Date Created:** [ISO 8601]
+    **Team:** [names and roles]
+
+    ## Contents
+
+    - `genai-concept-reel.mp4` — Concept animation (90-180 sec)
+    - `node-network.toe` — TouchDesigner logic network
+    - `xr-interaction-sandbox/` — Unity XR build
+    - `workflow-log.md` — Detailed execution log
+    - `assumptions-and-simulations.md` — Mocked/speculative items
+    - `motion-narrative-audit.md` — System-to-motion mapping
+    - `ergonomics-validation.md` — Input testing results
+    - `presentation-deck.pdf` — Stakeholder summary
+
+    ## Quick Start
+
+    1. Watch the concept reel (genai-concept-reel.mp4) to understand the intended motion language.
+    2. Review assumptions-and-simulations.md to identify what is mocked.
+    3. Load xr-interaction-sandbox/ in Unity and run the [Target Device] build.
+    4. Reference workflow-log.md to understand tool settings and prompt chains.
+
+  interaction_model_stub: |
+    # Interaction Model
+
+    **ID:** [kebab-case-id]
+    **Name:** [descriptive name]
+    **Validation Status:** [validated | simulated | speculative]
+
+    ## Primary Input
+
+    - **Modality:** [gaze, hand-tracking, gesture, etc.]
+    - **Precision Tolerance:** [±X mm]
+    - **Session Duration:** [X minutes sustainable]
+
+    ## Feedback States
+
+    | State | Visual | Timing |
+    |-------|--------|--------|
+    | Hover | [description] | Immediate |
+    | Dwell | [description] | [X ms] |
+    | Confirm | [description] | [X ms] |
+    | Error | [description] | [X ms] |
+
+    ## Ergonomic Constraints
+
+    - Comfortable reach zone: [description]
+    - Max arm elevation: [X degrees]
+    - Estimated fatigue onset: [X hours]
+
+    ## Evidence & Validation
+
+    See: `ergonomics-validation.md` section [#]
+
+  motion_narrative_stub: |
+    # Motion Narrative: [Entity or Behavior]
+
+    **System Entity:** [from technical-system-data]
+    **Spatial Metaphor:** [human-readable translation]
+
+    ## Trigger → Visual Response
+
+    | When | What Happens | Duration | Feedback |
+    |------|--------------|----------|----------|
+    | [Trigger] | [Visual description] | [X ms] | [color, scale, particle, etc.] |
+
+    ## Fidelity Assessment
+
+    - **Correspondence:** [Describe how visual behavior maps back to system logic]
+    - **Confidence:** [high | medium | low]
+    - **Justification:** [Why this metaphor? Why this timing?]
+
+  workflow_log_stub: |
+    # Workflow Log
+
+    **Prototype ID:** [SPATIAL-TYPE-YYMMDD]
+    **Date Created:** [ISO 8601]
+    **Authors:** [names]
+
+    ## Phase 1: Orient
+
+    | Step | Action | Tool | Input | Output | Duration | Notes |
+    |------|--------|------|-------|--------|----------|-------|
+    | 1 | [Extract entities] | [tool] | technical-system-data | system-narrative.md | [X min] | [notes] |
+
+    ## Phase 2: Conceptualize
+
+    ### GenAI Runs
+
+    **Run 1: Style Frames**
+    - Model: [Midjourney v6]
+    - Prompt: [exact prompt text]
+    - Seeds: [list]
+    - Curation: [what was kept, what was replaced]
+    - Copyright Review: [notes]
+
+    ## Phase 3–5: [Continuing pattern]
+
+    ## Blockers & Escalations
+
+    [List any issues and resolutions]
+
+    ## Manual Corrections
+
+    [What broke, how it was fixed, time spent]
+
+    ## Final Assets
+
+    - genai-concept-reel.mp4 → [path]
+    - node-network.toe → [path]
+    - xr-interaction-sandbox → [path]
+
+    ## Handoff Notes
+
+    [What to know before iterating; technical debt; loose ends]
+
+  assumptions_and_simulations_stub: |
+    # Assumptions & Simulations
+
+    **Prototype ID:** [SPATIAL-TYPE-YYMMDD]
+
+    ## Mocked / Simulated Behavior
+
+    ### [Entity or System Behavior]
+
+    - **What is Simulated:** [Description of what is NOT real-time tested]
+    - **Why:** [Time constraint, tool limitation, or design decision]
+    - **Confidence Level:** [high | medium | low]
+    - **De-risking Path:** [What would it take to validate in engine?]
+
+    ## Speculative Items (Proposed but Not Implemented)
+
+    ### [Future capability or interaction]
+
+    - **Description:** [What was proposed]
+    - **Status:** [Deferred to Phase X, or requires X resources]
+    - **Notes:** [Why it wasn't built; blockers]
+
+    ## Validated Capabilities (Tested in Engine)
+
+    ### [Behavior that is proven]
+
+    - **Tested Against:** [technical-system-data section Y, or direct engine test]
+    - **Evidence:** [reference to ergonomics-validation.md, video timestamp, or log entry]
+    - **Confidence Level:** [high]
+
+    ## Known Limitations
+
+    - [Limitation 1]
+    - [Limitation 2]
+
+    ## Stakeholder Disclosure
+
+    **Do NOT present as production-ready:**
+    - [List any capabilities that look real but are simulated]
+
+    **Safe to present as exploratory:**
+    - [List validated, low-risk items]
