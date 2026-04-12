@@ -150,9 +150,9 @@ button {
 }
 
 .hero-thesis {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.6;
-  color: var(--rule);
+  color: var(--black);
   max-width: 36ch;
 }
 
@@ -293,9 +293,9 @@ button {
 }
 
 .section-heading p {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.7;
-  color: var(--rule);
+  color: var(--black);
   max-width: 48ch;
 }
 
@@ -659,9 +659,9 @@ button {
 }
 
 .repo-caption {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.6;
-  color: var(--rule);
+  color: var(--black);
   margin-top: 4px;
 }
 
@@ -734,9 +734,9 @@ button {
 }
 
 .outro-card p {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.7;
-  color: var(--rule);
+  color: var(--black);
   max-width: 52ch;
 }
 
@@ -746,9 +746,9 @@ button {
   margin-top: 16px;
   padding-top: 16px;
   border-top: 1px solid var(--rule);
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.6;
-  color: var(--rule);
+  color: var(--black);
 }
 
 /* ─── Footer ─── */
@@ -867,9 +867,9 @@ button {
 }
 
 .skill-intent {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.7;
-  color: var(--rule);
+  color: var(--black);
   margin-top: 16px;
 }
 
@@ -905,7 +905,7 @@ button {
 }
 
 .skill-columns li {
-  font-size: 10px;
+  font-size: 11px;
   line-height: 1.5;
   padding: 4px 0;
   border-bottom: 1px solid rgba(161, 161, 161, 0.3);
@@ -1056,9 +1056,9 @@ button {
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid var(--rule);
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.7;
-  color: var(--rule);
+  color: var(--black);
   animation: wipeIn 300ms linear;
 }
 
