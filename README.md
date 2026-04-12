@@ -7,6 +7,8 @@ The app presents a firm-specific operating model for turning portfolio
 complexity, thesis material, and founder signal into high-craft media systems
 without losing taste, truth, or strategic clarity.
 
+<img width="1714" height="962" alt="Screenshot 2026-04-12 at 7 25 29 PM 1" src="https://github.com/user-attachments/assets/7f79076c-d82e-4f9f-a903-5f4699566a52" />
+
 ## Goal
 
 Build a viewer-facing demonstration of how a new media team could encode its
