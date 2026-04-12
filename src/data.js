@@ -1,7 +1,7 @@
 export const firmContext = {
   title: "New Media Operating System",
   subtitle:
-    "A bespoke operating model for how a16z’s design and new media team could turn portfolio complexity, thesis material, and founder signal into clear, high-craft media systems.",
+    "A bespoke operating model for how a16z's design and new media team could turn portfolio complexity, thesis material, and founder signal into clear, high-craft media systems.",
   thesis:
     "The point is not to automate taste. The point is to encode narrative judgment, visual rigor, and production flow so the team can move faster without flattening the idea.",
 };
@@ -171,4 +171,90 @@ export const repoTree = [
   "src/App.jsx",
   "src/data.js",
   "src/styles.css",
+];
+
+export const skillLibrary = [
+  {
+    id: "new-media-operating-system",
+    name: "New Media Operating System",
+    version: "0.1.0",
+    status: "active",
+    owner: "design-new-media",
+    intent:
+      "Turn dense partner, founder, thesis, and product material into a bespoke new-media operating system across motion, editorial, social, interactive, and stage formats.",
+    tags: ["new-media", "editorial-design", "motion-systems", "portfolio-storytelling"],
+    inputs: ["core material", "distribution goal", "brand context"],
+    outputs: ["story spine", "visual direction", "format plan", "review notes"],
+    swarm: ["Thesis Editor", "Visual Systems Lead", "New Media Producer", "Creative Director Review"],
+  },
+  {
+    id: "spatial-motion-genai-architect",
+    name: "Spatial & Motion GenAI Architect",
+    version: "1.1.0",
+    status: "active",
+    owner: "advanced-interfaces-rnd",
+    intent:
+      "Design experimental spatial and motion-based prototypes that translate complex technical systems into immersive visual narratives using generative AI, real-time compositing, and XR.",
+    tags: ["motion-design", "xr-prototyping", "generative-ai", "spatial-computing"],
+    inputs: ["technical system data", "spatial interaction spec", "brand motion constraints", "demo context"],
+    outputs: ["concept reel", "node logic graph", "XR interaction sandbox", "workflow docs"],
+    swarm: ["System Translator", "Motion Architect", "XR Prototyper", "Demo Director"],
+  },
+  {
+    id: "growth-performance-design-architect",
+    name: "Growth & Performance Design Architect",
+    version: "1.2.0",
+    status: "active",
+    owner: "growth-marketing-product-union",
+    intent:
+      "Design and write high-performing acquisition, activation, and retention experiences with hypothesis-driven experimentation and message-match continuity.",
+    tags: ["performance-marketing", "conversion-optimization", "copywriting", "ab-testing"],
+    inputs: ["growth hypothesis", "funnel stage", "performance data", "offer definition", "brand constraints"],
+    outputs: ["experiment design", "landing pages", "ad creative system", "funnel analytics"],
+    swarm: ["Hypothesis Architect", "Copy Strategist", "Visual Performance Lead", "Analytics Reviewer"],
+  },
+  {
+    id: "autonomous-venture-studio",
+    name: "Autonomous Venture Studio",
+    version: "2.0.0",
+    status: "active",
+    owner: "venture-studio-executive-office",
+    intent:
+      "Operate a startup-within-an-agent: validate opportunity, design enterprise-grade product, construct brand system, produce executive narrative, and govern autonomous workflows.",
+    tags: ["venture-studio", "product-design", "brand-systems", "executive-narrative"],
+    inputs: ["venture brief", "business constraints", "technical constraints", "market signals"],
+    outputs: ["market requirement", "system architecture", "brand system", "executive narrative"],
+    swarm: ["Market Validator", "Product Architect", "Brand Director", "Executive Narrator"],
+  },
+];
+
+export const simulationOutputs = {
+  "thesis-editor": {
+    label: "Story Brief",
+    content:
+      "The founder has built the first inference-cost optimizer that makes frontier models 4x cheaper at scale. The narrative spine: cost used to be a moat — now it's a vulnerability. Frame around the moment a Series B company can outperform incumbents on cost without sacrificing quality.",
+  },
+  "visual-systems-lead": {
+    label: "Visual Direction",
+    content:
+      "Dark minimal system. Typography-forward with monospace data callouts. Accent: electric teal on matte black. Motion language: precise, mechanical transitions — no organic flourishes. The system should feel like infrastructure, not a consumer product.",
+  },
+  "new-media-producer": {
+    label: "Launch Package",
+    content:
+      "90-sec hero film: split-screen showing cost curves collapsing in real time. Social cutdowns: 3 vertical clips (problem, mechanism, proof). Stage toolkit: animated data viz for partner keynote. Editorial: long-form technical walkthrough with inline demos.",
+  },
+  "creative-director-review": {
+    label: "Review Gate",
+    content:
+      "Approved with notes: The cost narrative is strong but needs a human anchor — add a 15-sec founder segment showing conviction, not just metrics. Ensure the social cuts don't oversimplify the technical mechanism into generic 'AI is cheaper' territory.",
+  },
+};
+
+export const navSections = [
+  { id: "flow", label: "Swarm" },
+  { id: "scenarios", label: "Workflows" },
+  { id: "skills", label: "Skills" },
+  { id: "simulate", label: "Simulate" },
+  { id: "repo", label: "Repo" },
 ];

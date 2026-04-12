@@ -49,7 +49,7 @@ skills:
 
   - id: "new-media-operating-system"
     path: "skills/new-media-operating-system"
-    status: "concept"
+    status: "active"
     files:
       skill: "SKILL.md"
       prd: "PRD.yaml"
