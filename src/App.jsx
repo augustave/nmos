@@ -125,6 +125,7 @@ function App() {
       <header className="hero">
         <div className="hero-copy">
           <div className="eyebrow">Design Operating System</div>
+          <div className="hero-file-title">SKILL.MD</div>
           <h1>{firmContext.title}</h1>
           <p className="hero-subtitle">{firmContext.subtitle}</p>
           <p className="hero-thesis">{firmContext.thesis}</p>

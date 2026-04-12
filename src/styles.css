@@ -130,6 +130,16 @@ button {
   margin-bottom: 20px;
 }
 
+.hero-file-title {
+  font-family: "SF Mono", "Fira Code", "Courier New", monospace;
+  font-weight: 700;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
 .hero h1 {
   font-family: var(--font-sans);
   font-weight: 900;
