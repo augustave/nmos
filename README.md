@@ -8,7 +8,7 @@ The app encodes an operating model for turning portfolio complexity, thesis mate
 
 ## Live
 
-- **GitHub Pages:** https://augustave.github.io/new-media-operating-system-demo/
+- **GitHub Pages:** https://augustave.github.io/nmos/
 - **Repository:** https://github.com/augustave/new-media-operating-system-demo
 
 ## Art Direction](https://github.com/augustave/nmos)
